@@ -1,8 +1,5 @@
 package HeuristicsEqualLengths;
 
-import DifferentLengths.ItakuraUnequalLengths;
-
-import java.util.Arrays;
 
 public class Itakura {
 
@@ -246,16 +243,6 @@ public class Itakura {
         }
 
         return this.c;
-    }
-
-    public static void main(String[] args) {
-        double[] ts1 = new double[]{4, 5, 6, 5, 2, 8, 6, 8};
-        double[] ts2 = new double[]{3, 2, 1, 0, 1, 7, 8, 9};
-        Itakura itakura = new Itakura(1,1/2.);
-        ItakuraUnequalLengths itakuraUnequalLengths = new ItakuraUnequalLengths(1,1/2.);
-        System.out.println(Arrays.toString(itakuraUnequalLengths.itakuraHeuristicArray(ts1, ts2)));
-
-
     }
 
 

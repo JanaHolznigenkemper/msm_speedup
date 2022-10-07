@@ -1,10 +1,8 @@
-package MsmDistArray;
+package PrunedMSMEqualLengths;
 
-import DifferentLengths.GreedyUnequalLengths;
-import DifferentLengths.ItakuraUnequalLengths;
-import Heuristics.Greedy;
-import MsmSpecialCasesExact.MsmConstant;
-import Preprocessing.Constants;
+import HeuristicsUnequalLengths.ItakuraUnequalLengths;
+import HeuristicsEqualLengths.Greedy;
+import MSMDistances.MsmConstant;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -287,37 +285,7 @@ public class PrunedAdvancedLBUB {
         return lowerBounds;
     }
 
-    public static void main(String[] args) {
-        //   MsmOriginal msmOriginal = new MsmOriginal(0.1);
 
-        //   double[] ts1 = new double[]{  1.286, -0.70525, 1.286, -0.70525};
-        // double[] ts2 = new double[]{ -0.63463, -0.63463, -0.63463, -0.63463};
-        double[] ts1 = new double[]{-0.17085, 7.4207, 0.48172, 0.87327, 6.0068, 0.45997, 0.13369, -0.17085};
-        double[] ts2 = new double[]{-0.15896, -0.15896, -0.15896, 7.5241, 5.9747, 0.47776, 0.39286, 0.095728};
-        // double[] ts1 = new double[]{ 1,2,3,4,5 };
-        //    double[] ts2 = new double[]{5,2,7,8,15};
-
-        double[] constants = Constants.getConstants(ts1, ts2, 2);
-        double minConstant = Math.min(constants[0], constants[2]);
-        //     double maxConstant = Math.min(constants[1], constants[3]);
-        MsmDistArray.PrunedAdvancedLBUB prunedAdvancedLBUB = new MsmDistArray.PrunedAdvancedLBUB(0.1, ts1, ts2, minConstant, "g");
-
-
-        MsmOriginal msmOriginal = new MsmOriginal(0.1);
-
-        System.out.println("Original " + msmOriginal.MSM_Distance(ts1, ts2));
-
-        System.out.println("pruned " + prunedAdvancedLBUB.msmDistPruned()[0]);
-
-        System.out.println("upperBound " + prunedAdvancedLBUB.upperBound);
-
-
-        double[][] lowerBoundsPerEntry = prunedAdvancedLBUB.lowerBoundsPerEntry();
-        System.out.println("lower Bounds: ");
-        for (double[] doubles : lowerBoundsPerEntry) {
-            System.out.println(Arrays.toString(doubles));
-        }
-    }
 
 
 }

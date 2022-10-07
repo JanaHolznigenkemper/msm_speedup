@@ -4,6 +4,8 @@ package PrunedMSMUnequalLengths;
 
 import java.util.Arrays;
 
+import HeuristicsUnequalLengths.GreedyUnequalLengths;
+
 public class PrunedSLUBUnequalGreedy {
     final double c;
 

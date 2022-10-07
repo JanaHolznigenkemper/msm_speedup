@@ -1,5 +1,7 @@
 package HeuristicsUnequalLengths;
 
+import MSMDistances.*;
+
 
 public class ConstantUB {
 

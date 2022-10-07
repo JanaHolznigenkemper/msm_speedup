@@ -3,6 +3,7 @@ package PrunedMSMEqualLengths;
 import HeuristicsUnequalLengths.ItakuraUnequalLengths;
 import HeuristicsEqualLengths.Greedy;
 import HeuristicsEqualLengths.SakoeChiba;
+import MSMDistances.*;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -276,14 +277,5 @@ public class PrunedAdvancedLB {
     }*/
 
 
-    public static void main(String[] args) {
 
-        double[] ts1 = new double[]{-0.17085, 7.4207, 0.48172, 0.87327, 6.0068, 0.45997, 0.13369, -0.17085};
-        double[] ts2 = new double[]{-0.15896, -0.15896, -0.15896, 7.5241, 5.9747, 0.47776, 0.39286, 0.095728};
-
-
-
-
-
-    }
 }
